@@ -1,0 +1,19 @@
+{
+  "name": "martilleando",
+  "version": "1.0.7",
+  "description": "Martilleando is a basic package for time",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jhonazsh17/martilleando.git"
+  },
+  "keywords": [
+    "javascript",
+    "date"
+  ],
+  "author": "Jhon Medina <jhonazsh.17@gmail.com>",
+  "license": "MIT"
+}
