@@ -23,11 +23,15 @@ var date = martilleando.getCurrentDay('24/07/2021');
 Tenemos los siguientes usos con formato:
 
 ```js
+// with format by default is DDMMYYYY
+var date = martilleando.getCurrentDay('25/04/1950');
+// result 25/04/1950
+
 var date = martilleando.getCurrentDay('25/04/1950', 'DDMMYYYY');
-// result {day: '25', month: '04', year: '1950'}
+// result 25/04/1950
 
 var date = martilleando.getCurrentDay('14/06/1943', 'YYYYMMDD');
-// result {year: '1943', month: '06', day: '14'}
+// result 1943/06/14
 ```
 
 ### Obtener la fecha de hoy:
@@ -37,15 +41,31 @@ El siguiente uso es para poder obtener la fecha del día de hoy.
 ```js
 // with format by default is DDMMYYYY
 var date = martilleando.getNow();
-// result {day: '25', month: '07', year: '2021'}
+// result 25/07/2021
 
-// with format DDMMYYYY
+// with format DDMMYYYY | DMY | dmy
 var date = martilleando.getNow('DDMMYYYY');
-// result {day: '25', month: '07', year: '2021'}
+// result 25/07/2021
 
-// with format YYYYMMDD
+// with format YYYYMMDD | YMD | ymd
 var date = martilleando.getNow('YYYYMMDD');
-// result {year: '2021', month: '07', day: '25'}
+// result 2021/07/2021
+```
+
+### Obtener la fecha en un objeto:
+
+El siguiente uso es para poder obtener la fecha dada en un objeto.
+
+```js
+// with order asc by default
+var date = martilleando.getDateInObject('17/09/1990'); 
+// result: {day: '17', month: '09', year: '1990'}
+
+var date = martilleando.getDateInObject('17/09/1990', 'asc');
+// result: {day: '17', month: '09', year: '1990'}
+
+var date = martilleando.getDateInObject('17/09/1990', 'dsc');
+// result: {year: '1990', month: '09', day: '17'}
 ```
 
 ## Licencia
