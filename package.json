@@ -1,6 +1,6 @@
 {
   "name": "martilleando",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Martilleando is a basic package for time",
   "main": "src/index.js",
   "scripts": {
