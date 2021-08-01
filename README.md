@@ -24,13 +24,13 @@ Tenemos los siguientes usos con formato:
 
 ```js
 // with format by default is DDMMYYYY
-var date = martilleando.getCurrentDay('25/04/1950');
+martilleando.getCurrentDay('25/04/1950');
 // result 25/04/1950
 
-var date = martilleando.getCurrentDay('25/04/1950', 'DDMMYYYY');
+martilleando.getCurrentDay('25/04/1950', 'DDMMYYYY');
 // result 25/04/1950
 
-var date = martilleando.getCurrentDay('14/06/1943', 'YYYYMMDD');
+martilleando.getCurrentDay('14/06/1943', 'YYYYMMDD');
 // result 1943/06/14
 ```
 
@@ -40,15 +40,15 @@ El siguiente uso es para poder obtener la fecha del día de hoy.
 
 ```js
 // with format by default is DDMMYYYY
-var date = martilleando.getNow();
+martilleando.getNow();
 // result 25/07/2021
 
 // with format DDMMYYYY | DMY | dmy
-var date = martilleando.getNow('DDMMYYYY');
+martilleando.getNow('DDMMYYYY');
 // result 25/07/2021
 
 // with format YYYYMMDD | YMD | ymd
-var date = martilleando.getNow('YYYYMMDD');
+martilleando.getNow('YYYYMMDD');
 // result 2021/07/2021
 ```
 
@@ -58,14 +58,38 @@ El siguiente uso es para poder obtener la fecha dada en un objeto.
 
 ```js
 // with order asc by default
-var date = martilleando.getDateInObject('17/09/1990'); 
+martilleando.getDateInObject('17/09/1990'); 
 // result: {day: '17', month: '09', year: '1990'}
 
-var date = martilleando.getDateInObject('17/09/1990', 'asc');
+martilleando.getDateInObject('17/09/1990', 'asc');
 // result: {day: '17', month: '09', year: '1990'}
 
-var date = martilleando.getDateInObject('17/09/1990', 'dsc');
+martilleando.getDateInObject('17/09/1990', 'dsc');
 // result: {year: '1990', month: '09', day: '17'}
+```
+
+### Obtener el número de mes:
+
+El siguiente uso es para poder obtener el mes de una determinada fecha.
+
+```js
+martilleando.month('17/09/1990');
+// result: 09
+```
+
+### Obtener el nombre del mes:
+
+El siguiente uso es para poder obtener el nombre del mes de una determinada fecha.
+
+```js
+martilleando.monthName('17/09/1990');
+// result: Septiembre
+
+martilleando.monthName('17/09/1990', 'long');
+// result: Septiembre
+
+martilleando.monthName('17/09/1990', 'short');
+// result: Sep
 ```
 
 ## Licencia
